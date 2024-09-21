@@ -2,43 +2,29 @@ package com.prowings.collection.arraylist;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
+import java.util.Vector;
 
-public class ArrayListDemo {
+public class ArrayListDemo2 {
 
 	public static void main(String[] args) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
 		int capacity = 0;
 		
-		ArrayList mylist = new ArrayList(20);
+		Vector vector = new Vector();
+		
+		vector.add(20);
+		vector.add(10);
+		vector.add(30);
+		
+		ArrayList mylist = new ArrayList(vector);
+		
+		mylist.add(444);
+		mylist.add(444);
+		
+		mylist.trimToSize();
 		capacity = getCapacity(mylist);
+		
         System.out.println("Capacity: " + capacity);
 		System.out.println("size = " + mylist.size());
-
-		mylist.add(123);
-		mylist.add(123);
-		mylist.add(123);
-		mylist.add(123);
-		mylist.add(123);
-		mylist.add(123);
-		mylist.add(123);
-		mylist.add(123);
-		mylist.add(123);
-		mylist.add(123);
-		mylist.add(123);
-		mylist.add(123);
-		mylist.add(123);
-		mylist.add(123);
-		mylist.add(123);
-		mylist.add(123);
-		mylist.add(123);
-		mylist.add(123);
-		mylist.add(123);
-		mylist.add(123);
-		mylist.add(123);
-		capacity = getCapacity(mylist);
-        System.out.println("after adding  element : Capacity: " + capacity);
-        System.out.println("after adding  element : size = " + mylist.size());
-
-
 		System.out.println(mylist);
 
 	}
