@@ -4,16 +4,18 @@ import java.util.Objects;
 
 public class Student {
 	
-	private String name;
 	private int roll;
+	private String name;
+	private String address;
 
 	public Student() {
 	}
 
-	public Student(String name, int roll) {
+	public Student(int roll, String name,String address) {
 		super();
 		this.name = name;
 		this.roll = roll;
+		this.address = address;
 	}
 
 	public String getName() {
@@ -32,34 +34,34 @@ public class Student {
 		this.roll = roll;
 	}
 
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
 	@Override
 	public String toString() {
-		return "Student [name=" + name + ", roll=" + roll + "]";
+		return "Student [roll=" + roll + ", name=" + name + ", address=" + address + "]";
 	}
 
 	@Override
 	public int hashCode() {
-		int result = 1;
-		result = 31 * result + this.name.hashCode();
-		result = result + this.roll;
-		
-		return result;
+		return Objects.hash(address, name, roll);
 	}
 
 	@Override
 	public boolean equals(Object obj) {
-		boolean res = false;
-		Student s2 = (Student) obj;
-		
-		if(this.name.equals(s2.name))
-		{
-			if(this.roll == s2.roll)
-				res = true;
-		}
-		return res;
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Student other = (Student) obj;
+		return Objects.equals(address, other.address) && Objects.equals(name, other.name) && roll == other.roll;
 	}
-
-	
-	
 
 }
