@@ -34,6 +34,7 @@ public class Employee implements Comparable {
 	public int compareTo(Object o) {
 		Employee e2 = (Employee)o;
 		
+		//Comparison using EmpId
 //		if(this.empId == e2.empId)
 //			return 0;
 //		else if(this.empId > e2.empId)
@@ -41,7 +42,7 @@ public class Employee implements Comparable {
 //		else
 //			return -3;
 		
-		
+		//Comparison using Name
 		return this.name.compareTo(e2.name);
 		
 	}
