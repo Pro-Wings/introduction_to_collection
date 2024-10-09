@@ -1,5 +1,6 @@
 package com.prowings.map.treemap.comparator;
 
+import java.util.Comparator;
 import java.util.TreeMap;
 
 public class TreeMapUsingComparator {
@@ -17,14 +18,18 @@ public class TreeMapUsingComparator {
 		
 		CarSpeedComparator sortBySpeed = new CarSpeedComparator();
 		
-		TreeMap map = new TreeMap(sortBySpeed);
+		TreeMap map = new TreeMap(sortByCompanyName);
 		
 		map.put(c3, 444444444);
 		map.put(c1, 111111111);
-		map.put(null, 999999999);
+		map.put(c4, 999999999);
 		map.put(c2, 888888888);
 		
 		System.out.println(map);
+		
+		Comparator cmp = map.comparator();
+		
+		System.out.println("Comparator Used by this TreeMap is : "+cmp.getClass().getName());
 		
 	}
 
