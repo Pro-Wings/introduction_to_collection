@@ -28,6 +28,7 @@ public class EnumMapDemo {
 		daysMap.put(Days.THURSDAY, 5);
 		daysMap.put(Days.FRIDAY, 6);
 		daysMap.put(Days.SATURDAY, 7);
+//		daysMap.put(null, 8);
 //		daysMap.put(Size.LARGE, null);
 		
 		System.out.println(daysMap);

@@ -18,6 +18,13 @@ public class HashtableDemo {
 		System.out.println(table.put("CCC", 9999));
 		System.out.println(table.put("DDD", 1111));
 
+		System.out.println(table.put("EEE", 1111));
+		System.out.println(table.put("FFF", 1111));
+		System.out.println(table.put("GGG", 1111));
+		System.out.println(table.put("HHH", 1111));
+
+		System.out.println(table.put("ZZZ", 1111));
+
 		System.out.println("-------keys enumeration------");
 		Enumeration allKeys = table.keys();
 		
